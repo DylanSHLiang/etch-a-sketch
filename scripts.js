@@ -44,5 +44,5 @@ colorButton.addEventListener("input", () => {
 })
 
 saveButton.addEventListener("click", () => {
-    
+    navigator.mediaDevices.getDisplayMedia();
 })
