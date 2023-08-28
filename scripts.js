@@ -12,9 +12,9 @@ function newGrid(size) {
         for (let j = 0; j < size; j++) {
             let newBox = document.createElement("div");
             newBox.classList.add("box");
-            newBox.setAttribute("style", `border: 1px solid rgb(50, 50, 50); height: ${boxSize}px; width: ${boxSize}px; flex: 0 0 auto;`);
+            newBox.setAttribute("style", `border: 0; height: ${boxSize}px; width: ${boxSize}px; flex: 0 0 auto; background-color: white;`);
             newBox.addEventListener("mouseenter", () => {
-                newBox.style["background-color"] = "rgb(50, 50, 50)";
+                newBox.style["background-color"] = "rgb(0, 0, 0)";
             });
             newRow.appendChild(newBox);
         }
@@ -28,7 +28,7 @@ function deleteGrid() {
 newGrid(16);
 
 button.addEventListener("click", () => {
-    var size = prompt("How many boxes?");
+    var size = prompt("How many boxes? (1 - 100)");
     while (size < 1 || size > 100) {
         size = prompt("Please enter a number from 0 - 100");
     }
